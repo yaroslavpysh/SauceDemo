@@ -6,8 +6,14 @@ import org.openqa.selenium.WebDriver;
 public class CartPage extends BasePage {
     private final By CHECKOUT_BUTTON = By.id("checkout");
 
+
     public CartPage(WebDriver driver) {
         super(driver);
+    }
+
+    public boolean isOpened() {
+        return waitForVisibility(CHECKOUT_BUTTON);
+
     }
 
     public void open(){

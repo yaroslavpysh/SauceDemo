@@ -13,8 +13,10 @@ public class CheckoutTest extends BaseTest {
         productsPage.clickCart();
         cartPage.clickCheckout();
         checkoutStepOnePage.fillInformation("abc", "abc", "123");
-        checkoutStepOnePage.isOpened();
+        checkoutStepTwoPage.isOpened();
         Assert.assertTrue(productsPage.isOpened(), "Title of the checkout page in not displayed");
+        checkoutStepTwoPage.clickFinish();
+        Assert.assertTrue(finishPage.isOpened(),"Title of the checkout page in not displayed");
     }
 
     @Test

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 
 public class CheckoutStepOnePage extends BasePage{
 
-    private final By FIRST_NAME = By.id("first-name");
-    private final By LAST_NAME = By.id("last-name");
-    private final By POSTAL_CODE = By.id("postal-code");
-    private final By PAGE_TITLE = By.xpath("//span[text()='Checkout: Overview']");
-    private final By CONTINUE_BUTTON = By.cssSelector("[data-test=continue]");
+    private final By FIRSTNAME_INPUT = By.id("first-name");
+    private final By LASTNAME_INPUT= By.id("last-name");
+    private final By POSTALCODE_INPUT = By.id("postal-code");
+    private final By PAGE_TITLE = By.xpath("//span[text()='Checkout: Your Information]");
+    private final By CONTINUE_BUTTON = By.id("continue");
     private final By ERROR_MESSAGE = By.cssSelector("[data-test=error]");
     private final By CANCEL_BUTTON = By.cssSelector("[data-test=cancel]");
 
@@ -22,14 +22,15 @@ public class CheckoutStepOnePage extends BasePage{
 
     }
 
-    public boolean isOpened(){
-        return driver.findElement(PAGE_TITLE).isDisplayed();
+    public boolean isOpened() {
+        return waitForVisibility(PAGE_TITLE);
+
     }
 
     public void fillInformation(String firstName, String lastName, String postalCode){
-        driver.findElement(FIRST_NAME).sendKeys(firstName);
-        driver.findElement(LAST_NAME).sendKeys(lastName);
-        driver.findElement(POSTAL_CODE).sendKeys(postalCode);
+        driver.findElement(FIRSTNAME_INPUT).sendKeys(firstName);
+        driver.findElement(LASTNAME_INPUT).sendKeys(lastName);
+        driver.findElement(POSTALCODE_INPUT).sendKeys(postalCode);
         driver.findElement(CONTINUE_BUTTON).click();
     }
     public String getError(){

@@ -20,6 +20,10 @@ public class LoginPage extends BasePage {
         driver.get("https://www.saucedemo.com/");
     }
 
+    public boolean isOpened() {
+        return waitForVisibility(LOGIN_BUTTON);
+    }
+
     public void login(String userName, String password) {
         driver.findElement(USERNAME_INPUT).sendKeys(userName);
         driver.findElement(PASSWORD_INPUT).sendKeys(password);
