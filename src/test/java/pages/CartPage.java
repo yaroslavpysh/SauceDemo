@@ -16,17 +16,18 @@ public class CartPage extends BasePage {
 
     }
 
-    public void open(){
+    public void open() {
         driver.get(BASE_URL + "cart.html");
     }
 
-    public String getProductPrice(String product){
+    public String getProductPrice(String product) {
         String locator = String.format("//div[text()='%s']//ancestor::div[@class='cart_item']//div[@class='cart_item_label']",
                 product);
         return driver.findElement(By.xpath(locator)).getText();
 
     }
-    public void clickCheckout(){
+
+    public void clickCheckout() {
         driver.findElement(CHECKOUT_BUTTON).click();
 
     }

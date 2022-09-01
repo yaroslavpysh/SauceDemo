@@ -8,9 +8,9 @@ import static org.testng.Assert.assertTrue;
 public class ProductTest extends BaseTest {
 
     @Test
-    public void buyProduct(){
+    public void buyProduct() {
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login("standard_user", "secret_sauce");
         assertTrue(productsPage.isOpened(), "Title of the page in not displayed");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.clickCart();

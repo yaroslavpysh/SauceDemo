@@ -16,7 +16,7 @@ public class CheckoutTest extends BaseTest {
         checkoutStepTwoPage.isOpened();
         Assert.assertTrue(productsPage.isOpened(), "Title of the checkout page in not displayed");
         checkoutStepTwoPage.clickFinish();
-        Assert.assertTrue(finishPage.isOpened(),"Title of the checkout page in not displayed");
+        Assert.assertTrue(finishPage.isOpened(), "Title of the checkout page in not displayed");
     }
 
     @Test
