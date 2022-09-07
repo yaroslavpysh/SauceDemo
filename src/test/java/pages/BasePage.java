@@ -18,7 +18,7 @@ public abstract class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(1));
     }
 
     public void clickCart() {
@@ -49,5 +49,6 @@ public abstract class BasePage {
 //        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", driver.findElement(locator));
 //
 //    }  Не срабатывает
+
 
 }

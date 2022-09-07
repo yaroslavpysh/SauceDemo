@@ -21,7 +21,7 @@ public class CartPage extends BasePage {
     }
 
     public String getProductPrice(String product){
-        String locator = String.format("//div[text()='%s']//ancestor::div[@class='cart_item']//div[@class='cart_item_label']",
+        String locator = String.format("//div[text()='%s']//ancestor::div[@class='cart_item']//div[@class='inventory_item_price']",
                 product);
         return driver.findElement(By.xpath(locator)).getText();
 
