@@ -9,8 +9,7 @@ public class ProductsPage extends BasePage {
 
     private final By PAGE_TITLE = By.cssSelector(".title");
 
-    public ProductsPage(WebDriver driver)
-    {
+    public ProductsPage(WebDriver driver) {
         super(driver);
     }
 
@@ -19,7 +18,7 @@ public class ProductsPage extends BasePage {
     }
 
     public boolean isOpened() {
-       return waitForVisibility(PAGE_TITLE);
+        return waitForVisibility(PAGE_TITLE);
 
     }
 

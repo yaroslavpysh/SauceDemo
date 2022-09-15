@@ -3,9 +3,9 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckPrice extends BaseTest{
+public class CheckPrice extends BaseTest {
     @Test
-    public void checkNameOfProducts(){
+    public void checkNameOfProducts() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
@@ -18,7 +18,7 @@ public class CheckPrice extends BaseTest{
     }
 
     @Test
-    public void checkPriceOfProducts(){
+    public void checkPriceOfProducts() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
@@ -31,7 +31,7 @@ public class CheckPrice extends BaseTest{
     }
 
     @Test
-    public void checkItemTotalPrice(){
+    public void checkItemTotalPrice() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
@@ -44,7 +44,7 @@ public class CheckPrice extends BaseTest{
     }
 
     @Test
-    public void checkTax(){
+    public void checkTax() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");
@@ -57,7 +57,7 @@ public class CheckPrice extends BaseTest{
     }
 
     @Test
-    public void checkTotal(){
+    public void checkTotal() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         productsPage.addToCart("Sauce Labs Backpack");

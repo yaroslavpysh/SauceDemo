@@ -7,10 +7,11 @@ import static org.testng.Assert.assertTrue;
 
 public class ProductTest extends BaseTest {
 
-    @Test(description = "Check is price of product is correct in the Cart")//(enable=false) - выключение теста, (description = "Chec
+
+    @Test(description = "Check is price of product is correct in the Cart")//(enable=false) - выключение теста
     public void buyProduct(){
         loginPage.open();
-        loginPage.login("standard_user","secret_sauce");
+        loginPage.login("standard_user", "secret_sauce");
         assertTrue(productsPage.isOpened(), "Title of the page in not displayed");
         productsPage.addToCart("Sauce Labs Backpack");
         productsPage.clickCart();
