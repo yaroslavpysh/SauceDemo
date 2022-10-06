@@ -20,9 +20,10 @@ public class CartPage extends BasePage {
         driver.get(BASE_URL + "cart.html");
     }
 
-    public String getProductPrice(String product) {
-        String locator = String.format("//div[text()='%s']//ancestor::div[@class='cart_item']//div[@class='cart_item_label']",
-                product);
+
+    public String getProductPrice(String product){
+        String locator = String.format("//div[text()='%s']//ancestor::div[@class='cart_item']//div[@class='inventory_item_price']",
+               product);
         return driver.findElement(By.xpath(locator)).getText();
 
     }

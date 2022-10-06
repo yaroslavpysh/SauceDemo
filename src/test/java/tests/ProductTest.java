@@ -7,8 +7,9 @@ import static org.testng.Assert.assertTrue;
 
 public class ProductTest extends BaseTest {
 
-    @Test
-    public void buyProduct() {
+
+    @Test(description = "Check is price of product is correct in the Cart")//(enable=false) - выключение теста
+    public void buyProduct(){
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         assertTrue(productsPage.isOpened(), "Title of the page in not displayed");
@@ -17,6 +18,7 @@ public class ProductTest extends BaseTest {
         assertTrue(cartPage.isOpened(), "Cart page was not opened");
         Assert.assertEquals(cartPage.getProductPrice("Sauce Labs Backpack"), "$29.99",
                 "Product price is not correct");
+
     }
 
 }
